@@ -68,9 +68,9 @@ button {
 }
 
 .btn--primary {
-    color: #fff;
-    background: var(--primary-color);
-    border-color: var(--primary-color);
+    color: #fff !important;
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
 }
 
 .btn__icon {
@@ -98,7 +98,6 @@ button {
     margin-top: 24px;
     color: #656689;
     font-size: 1.6rem;
-    font-weight: 400;
     line-height: 1.88;
 }
 
@@ -267,7 +266,6 @@ button {
     line-height: 1.88;
     color: #656689;
     width: 391px;
-    font-weight: 400;
 }
 
 .hero__row {
@@ -387,7 +385,6 @@ button {
 .about__card-desc {
     color: #c6f4f9;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 1.43;
 }
 
@@ -555,7 +552,6 @@ button {
     width: 391px;
     color: #656689;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 1.71;
 }
 
@@ -637,7 +633,6 @@ button {
     width: 244px;
     color: #656689;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 1.71;
 }
 
@@ -648,7 +643,6 @@ button {
     color: #34396a;
     font-family: Sora, sans-serif;
     font-size: 1.2rem;
-    font-weight: 400;
     line-height: 1;
 }
 
@@ -776,7 +770,7 @@ button {
 }
 
 .staff-item:nth-child(4) .staff-item__img-wrap::before {
-    background: linear-gradient(180deg, #5bd6e2 0%, #00a7cc 100%);  
+    background: linear-gradient(180deg, #5bd6e2 0%, #00a7cc 100%);
 }
 
 .staff-item:nth-child(4) .staff-item__img-wrap::after {
@@ -799,7 +793,6 @@ button {
     margin-top: 34px;
     color: #656689;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 1;
 }
 
@@ -823,4 +816,155 @@ button {
     color: #ff5b2e;
     font-size: 1.6rem;
     border-color: currentColor;
+}
+
+/* Pricing */
+.pricing {
+    padding: 86px 0;
+    background: #fff6ed;
+}
+
+.pricing__container {
+    width: 994px;
+}
+
+.pricing__heading,
+.pricing__desc {
+    text-align: center;
+}
+
+.pricing__desc {
+    width: 709px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing__switch-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.pricing__switch-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 276px;
+    height: 56px;
+    border-radius: 99px;
+    border: 1px solid #ff5b2e99;
+    user-select: none;
+    cursor: pointer;
+}
+
+.pricing__switch-label::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 140px;
+    height: 100%;
+    border-radius: inherit;
+    background: #ff5b2e;
+}
+
+.pricing__switch-value {
+    position: relative;
+    z-index: 1;
+    padding: 20px 40px;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.pricing__switch-input:checked + .pricing__switch-label::before {
+    left: auto;
+    width: 131px;
+    right: 0;
+}
+
+.pricing__switch-input:not(:checked)
+    + .pricing__switch-label
+    .pricing__switch-value:nth-child(2),
+.pricing__switch-input:checked
+    + .pricing__switch-label
+    .pricing__switch-value:nth-child(1) {
+    color: #ff5b2e;
+}
+
+.pricing__switch-inner {
+    position: relative;
+}
+
+.pricing__sale-off {
+    position: absolute;
+    top: -10px;
+    right: -110px;
+}
+
+.pricing__list {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 44px;
+}
+
+.pricing-item {
+    padding: 30px 28px 43px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.pricing-item__type {
+    color: #ff5b2e;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.pricing-item__heading {
+    margin-top: 8px;
+    color: #3f4065;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.pricing-item__price {
+    margin-top: 24px;
+    color: #000958;
+    font-family: Sora;
+    font-size: 3.3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.pricing-item__btn {
+    --height: 44px;
+
+    margin-top: 22px;
+    outline: none;
+    width: 100%;
+    color: #ff5b2e;
+    border-color: #ff5b2e99;
+    background: transparent;
+}
+
+.pricing-item__list {
+    margin-top: 24px;
+}
+
+.pricing-item__item {
+    display: flex;
+    margin-top: 18px;
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.pricing-item__item::before {
+    content: url(../icons/price-check.svg);
+    margin-right: 14px;
 }
